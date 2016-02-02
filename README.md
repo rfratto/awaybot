@@ -11,10 +11,10 @@ in a channel that it's a member of.
 
 The following commands are available:
 
-`get`: Gets the current away message for your user.
-`set [message]`: Sets the current away message for your user.
-`clear`: Removes the current away message for your user.
-`help`: Displays the help menu.
+- `get`: Gets the current away message for your user.
+- `set [message]`: Sets the current away message for your user.
+- `clear`: Removes the current away message for your user.
+- `help`: Displays the help menu.
 
 # Running
 
