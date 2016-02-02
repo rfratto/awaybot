@@ -31,7 +31,7 @@ var is_active_user = function(bot, username) {
 	});
 }
 
-controller.hears('help',['direct_message','direct_mention','mention'], help_menu);
+controller.hears('help', ['direct_message','direct_mention','mention'], help_menu);
 
 controller.hears('get',['direct_message','direct_mention','mention'],function(bot,message) {
 	var reply = greet_text(message) + " ";
@@ -45,7 +45,7 @@ controller.hears('get',['direct_message','direct_mention','mention'],function(bo
 	bot.reply(message, reply);
 });
 
-controller.hears('clear',['direct_message','direct_mention','mention'],function(bot,message) {
+controller.hears('clear', ['direct_message','direct_mention','mention'], function(bot, message) {
 	var reply = greet_text(message) + " ";
 
 	if (messages.exists(message.user)) {
@@ -63,7 +63,7 @@ controller.hears('set (.*)', ['direct_message'], function (bot, message) {
 	bot.reply(message, "OK, I'll tell people that you're away.");
 });
 
-controller.hears('(.*)',['direct_message','direct_mention','mention'], help_menu);
+controller.hears('(.*)', ['direct_message','direct_mention','mention'], help_menu);
 
 controller.hears('@([a-zA-Z0-9_]+)', ['ambient'], function (bot, message) {
 	var username = message.match[1];
@@ -80,5 +80,5 @@ controller.hears('@([a-zA-Z0-9_]+)', ['ambient'], function (bot, message) {
 			+ away_message;
 
 		bot.reply(message, resp);
-	})
+	});
 });
