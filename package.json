@@ -1,0 +1,24 @@
+{
+  "name": "awaybot",
+  "version": "1.0.0",
+  "description": "A Slack bot to notify users when of somebody's away status.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "bot",
+    "slack"
+  ],
+  "author": "Robert Fratto <robertfratto@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-jasmine": "^2.2.1",
+    "jasmine": "^2.4.1"
+  },
+  "dependencies": {
+    "botkit": "0.0.5",
+    "rx": "^4.0.7"
+  }
+}
