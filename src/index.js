@@ -33,7 +33,19 @@ var is_active_user = function(bot, username) {
 
 controller.hears('help', ['direct_message','direct_mention','mention'], help_menu);
 
-controller.hears('get',['direct_message','direct_mention','mention'],function(bot,message) {
+controller.hears('^get <@([a-zA-Z0-9_]+)>$', ['direct_message','direct_mention','mention'], function (bot, message) {
+	var reply = greet_text(message) + " ";
+
+	if (messages.exists(message.match[1])) {
+		reply += "Their current message is: " + messages.get(message.match[1]);
+	} else {
+		reply += "That user do not currently have a message set.";
+	}
+
+	bot.reply(message, reply);
+});
+
+controller.hears('get', ['direct_message','direct_mention','mention'], function (bot, message) {
 	var reply = greet_text(message) + " ";
 
 	if (messages.exists(message.user)) {
