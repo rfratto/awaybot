@@ -1,5 +1,7 @@
 # Away Bot  
 
+[![Build Status](https://travis-ci.org/rfratto/awaybot.svg?branch=master)](https://travis-ci.org/rfratto/awaybot)
+
 A Slack bot that will inform channels of away users when mentioned with the
 `@` symbol. Only posts in channels when users have set an away message, and
 when those users are not active.
