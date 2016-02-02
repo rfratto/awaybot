@@ -21,6 +21,8 @@ The following commands are available:
 You can run Away Bot manually with the following command:
 `$ token=BOT_API_TOKEN node src/index.js`
 
+A docker image is also provided at `rfratto/awaybot`.
+
 Alternatively, you can use the Dockerfile provided:
 ```
 $ docker build -t awaybot .
