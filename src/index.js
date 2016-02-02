@@ -19,6 +19,7 @@ var help_menu = function(bot, message) {
 	bot.reply(message, greet_text(message) + " To type your away message, try: `set [my away message]`");
 	bot.reply(message, "To clear your away message, try: `clear`");
 	bot.reply(message, "To see your current away message, try: `get`");
+	bot.reply(message, "To see the current away message for a specific user, try: `get @username`");
 	bot.reply(message, "To see this menu, try: `help`.");
 };
 
