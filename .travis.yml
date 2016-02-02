@@ -5,5 +5,9 @@ language: node_js
 services:
     - docker
 
-script:
+before_script:
     - docker build -t rfratto/awaybot .
+    - npm install
+
+script:
+    - $(npm bin) gulp test
